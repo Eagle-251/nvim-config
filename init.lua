@@ -1,0 +1,2 @@
+require("Lazy")
+require("autocommands")
