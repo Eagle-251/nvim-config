@@ -12,17 +12,21 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
-
+vim.opt.wrap = true
+-- vim.cmd("colorscheme flexoki")
 -- require("lazy").setup(plugins, opts)
 
 require("lazy").setup({
 	spec = {
 		{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
+		{ import = "lazyvim.plugins.extras.lang.docker" },
+		{ import = "lazyvim.plugins.extras.util.project" },
+		-- { import = "lazyvim.plugins.extras.ui.mini-animate" },
 		{ import = "user" },
 	},
-	install = { colorscheme = { "catppuccin" } },
+	install = { colorscheme = { "flexoki" } },
 	defaults = { lazy = true },
-	ui = { wrap = "true" },
+	-- ui = { wrap = "true" },
 	change_detection = {
 		enabled = true,
 		notify = true,
